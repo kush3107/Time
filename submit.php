@@ -53,14 +53,14 @@ if($_GET['time']!=0) {
 
         if($hour<10 || $min<10) {
             if($hour<10 && $min<10)
-                echo 'Time in ' . $_GET['countryToConvert'] . ' is 0' . $hour . ':0' . $min . ':' . $sec.' , Previous Day';
+                $kush= 'Time in ' . $_GET['countryToConvert'] . ' is 0' . $hour . ':0' . $min . ':' . $sec.' , Previous Day';
             else if($hour<10)
-                echo 'Time in ' . $_GET['countryToConvert'] . ' is 0' . $hour . ':' . $min . ':' . $sec.' , Previous Day';
+                $kush= 'Time in ' . $_GET['countryToConvert'] . ' is 0' . $hour . ':' . $min . ':' . $sec.' , Previous Day';
             else
-                echo 'Time in ' . $_GET['countryToConvert'] . ' is ' . $hour . ':0' . $min . ':' . $sec.' , Previous Day';
+                $kush= 'Time in ' . $_GET['countryToConvert'] . ' is ' . $hour . ':0' . $min . ':' . $sec.' , Previous Day';
         }
         else
-            echo 'Time in '.$_GET['countryToConvert'].' is '.$hour.':'.$min.':'.$sec.' , Previous Day';
+            $kush= 'Time in '.$_GET['countryToConvert'].' is '.$hour.':'.$min.':'.$sec.' , Previous Day';
 
     }
 
@@ -73,11 +73,11 @@ if($_GET['time']!=0) {
         echo "Time in";
         if($hour<10 || $min<10) {
             if($hour<10 && $min<10)
-                $kush= ' ' . $_GET['countryToConvert'] . ' is 0' . $hour . ':0' . $min . ':' . $sec.' , Next Day';
+                $kush= 'Time in ' . $_GET['countryToConvert'] . ' is 0' . $hour . ':0' . $min . ':' . $sec.' , Next Day';
             else if($hour<10)
-                $kush= ' ' . $_GET['countryToConvert'] . ' is 0' . $hour . ':' . $min . ':' . $sec.' , Next Day';
+                $kush= 'Time in ' . $_GET['countryToConvert'] . ' is 0' . $hour . ':' . $min . ':' . $sec.' , Next Day';
             else
-                $kush= ' ' . $_GET['countryToConvert'] . ' is ' . $hour . ':0' . $min . ':' . $sec.' , Next Day';
+                $kush= 'Time in ' . $_GET['countryToConvert'] . ' is ' . $hour . ':0' . $min . ':' . $sec.' , Next Day';
         }
         else
             $kush= ' '.$_GET['countryToConvert'].' is '.$hour.':'.$min.':'.$sec.' , Next Day';
@@ -136,5 +136,11 @@ if(isset($error2) || isset($error3) || isset($error)){
 <h1 style="text-align: center">Time Coverter</h1>
 <p class="disp"><?= $kush ?></p>
 <p class="disp">Your time in <?= $_GET['countryEntered']?> is <?= $_GET['time'] ?></p>
+<br>
+
+<a class="link" href="index.php">
+    <img src="Screen-Shot-2013-03-09-at-22.13.01-600x367.png" /
+    >
+</a>
 </body>
 </html>

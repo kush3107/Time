@@ -2,3 +2,14 @@
 text-align: center;
     font-size: large;
 }
+.link{
+    text-decoration: none;
+    font-size: large;
+    text-align: center;
+}
+a:hover{
+    color: #ac2925;
+    text-decoration: underline;
+
+    font-size: x-large;
+}
