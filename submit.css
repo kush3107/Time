@@ -6,10 +6,15 @@ text-align: center;
     text-decoration: none;
     font-size: large;
     text-align: center;
+    background: transparent;
 }
 a:hover{
     color: #ac2925;
     text-decoration: underline;
 
     font-size: x-large;
+}
+.footer{
+    text-align: center;
+    margin-top: 320px;
 }

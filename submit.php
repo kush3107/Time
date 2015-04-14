@@ -15,7 +15,7 @@ $timeZoneEntered=$result1->fetch_row();
 //var_dump($timeZoneEntered);
 
 //Finding difference in terms of minutes
-$timeToAdd = $timeZoneToConvert[1] - $timeZoneEntered[1];
+$timeToAdd = $timeZoneToConvert[2] - $timeZoneEntered[2];
 $timeToAdd*=60;
 //var_dump($timeToAdd);
 
@@ -30,6 +30,7 @@ if ($_GET['time']) {
         $error=2;
     }
     $timeEntered = ($time[0] * 60) + $time[1];
+    //var_dump($timeEntered);
 }
 
 
@@ -39,8 +40,10 @@ if ($_GET['countryEntered'] === "--Please Choose a Country--")
 
 if ($_GET['countryToConvert'] === "--Please Choose a Country--")
     $error3 = 1;
+//var_dump($timeToAdd);
+//var_dump($error);
 
-if($_GET['time']!=0) {
+if($hour>=0&&$hour<24&&$min>=0&&$min<60&&$sec>=0&&$sec<60) {
     $timeFinal=$timeEntered+$timeToAdd;
 
     if ($timeFinal <0) {
@@ -135,6 +138,7 @@ if(isset($error2) || isset($error3) || isset($error)){
 <body style="background-size:cover" background="bgimage.gif">
 <h1 style="text-align: center">Time Coverter</h1>
 <p class="disp"><?= $kush ?></p>
+
 <p class="disp">Your time in <?= $_GET['countryEntered']?> is <?= $_GET['time'] ?></p>
 <br>
 
@@ -142,5 +146,7 @@ if(isset($error2) || isset($error3) || isset($error)){
     <img src="Screen-Shot-2013-03-09-at-22.13.01-600x367.png" /
     >
 </a>
+<p class="footer">About Us | Contact Us | Policy | Terms of Service</p>
+
 </body>
 </html>

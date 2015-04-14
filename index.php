@@ -10,11 +10,12 @@ $country_list=$result->fetch_all(MYSQLI_ASSOC);
 
 <!DOCTYPE html>
 <html>
-<body style="background-size:cover" background="bgimage.gif">
+<body style="background-size: cover" background="bgimage.gif">
 <head lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="submit.css">
     <title>Time Converter</title>
 </head>
 
@@ -89,6 +90,8 @@ $country_list=$result->fetch_all(MYSQLI_ASSOC);
 
 
 </div>
-
+<div>
+    <p class="footer">About Us | Contact Us | Policy | Terms of Service</p>
+</div>
 </body>
 </html>
